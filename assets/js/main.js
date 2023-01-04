@@ -177,24 +177,3 @@ $(function() {
       follower.removeClass("active");
   });
 })();
-
-(() => {
-const items = document.querySelectorAll('.project-list .project')
-
-items.forEach((el) => {
-  const image = el.querySelector('img')
-  
-  el.addEventListener('mouseenter', (e) => {
-    gsap.to(image, { autoAlpha: 1 })
-  })
-  
-   el.addEventListener('mouseleave', (e) => {
-    gsap.to(image, { autoAlpha: 0 })
-  })
-  
-  el.addEventListener('mousemove', (e) => {
-    gsap.set(image, { x: e.pageX, y: e.pageY })
-  })
-})
-})();
-
