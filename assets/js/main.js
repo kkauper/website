@@ -71,7 +71,7 @@ function KAUPERCO()
         $('body').addClass('nav-open');
         $(this).addClass('open');
         $('div.site-nav').attr('aria-hidden', 'false');
-      });
+      }); 
     }
 
     this.initHideOverlayNavigation = function()
