@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,20 +19,10 @@
 <link rel="manifest" href="/assets/favicon/site.webmanifest">
 <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#365448">
 <meta name="msapplication-TileColor" content="#fbf7f0">
-<meta name="theme-color" content="#1a5d8d">
+<meta name="theme-color" content="#365448">
 
 <link rel="canonical" href="https://kauper.co">
-{{ if .IsTranslated -}}
-{{ range .Translations -}}
-<link rel="alternate" href="https://kauper.co" hreflang="{{.Lang}}" />
-{{ end -}}
-{{ else -}}
-<!-- WORLD VERSIONS -->
-<link rel="alternate" href="https://kauper.co/de" hreflang="de_DE" />
-<link rel="alternate" href="https://kauper.co/en" hreflang="en_GB" />
-<!-- END / WORLD VERSION -->
-{{ end -}}
-<link rel="alternate" href="https://kauper.co" hreflang="de" />
+<link rel="alternate" href="https://kauper.co" hreflang="en_GB" />
 <link rel="alternate" href="https://kauper.co" hreflang="x-default" />
 
 </head>
