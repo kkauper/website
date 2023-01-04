@@ -319,6 +319,17 @@ summary {
 }
 
 
+body
+{
+    position: relative;
+    font-family: "Strawford";
+    background-color: #fefefe;
+    color: #000;
+    line-height: 1.25;
+    max-width: 100vw;
+    min-height: 100%;
+    font-weight: 400;
+}
 
 .cursor {
     display: none;
