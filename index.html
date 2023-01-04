@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <title>My Cool Website</title>
-   </head>
-   <body>
-      <h1>Welcome to my website!</h1>
-      <p>How was your day? 🎉</p>
-   </body>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="theme-color" content="#365448">
+
+<title>Kauper.co</title>
+
+<meta name="description" content="Website of Kai Kauper" />
+<meta name="robots" content="noindex" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#365448">
+<meta name="msapplication-TileColor" content="#fbf7f0">
+<meta name="theme-color" content="#1a5d8d">
+
+<link rel="canonical" href="https://kauper.co">
+{{ if .IsTranslated -}}
+{{ range .Translations -}}
+<link rel="alternate" href="https://kauper.co" hreflang="{{.Lang}}" />
+{{ end -}}
+{{ else -}}
+<!-- WORLD VERSIONS -->
+<link rel="alternate" href="https://kauper.co/de" hreflang="de_DE" />
+<link rel="alternate" href="https://kauper.co/en" hreflang="en_GB" />
+<!-- END / WORLD VERSION -->
+{{ end -}}
+<link rel="alternate" href="https://kauper.co" hreflang="de" />
+<link rel="alternate" href="https://kauper.co" hreflang="x-default" />
+
+</head>
+<body>
+   <div class="preloader"></div>
+   <div class="cursor"></div>
+   <div class="cursor-follower"></div>
+   
+   CONTENT
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+   <script src="/assets/js/main.js"></script>
+</body>
 </html>
