@@ -129,7 +129,7 @@ function KAUPERCO()
 
 $(function() {
   new KAUPERCO();
-});
+}); 
 
 
 (() => {
