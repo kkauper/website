@@ -32,7 +32,7 @@ function KAUPERCO()
 
     this.initPageExit = function()
     {
-      $('.link.--animate').click(function(event)
+      $(document).on('click', '.link.--animate', function(event)
       {
         event.preventDefault();
         newLocation = this.href;
