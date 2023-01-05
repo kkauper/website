@@ -123,7 +123,7 @@ main
     grid-template-rows: auto 1fr;
     grid-template-areas:
         "image image"
-        "info year";
+        "meta meta";
     border-radius: var(--radius);
     outline: 0;
     text-decoration: none;
@@ -154,16 +154,13 @@ main
 
     & > .meta
     {
+      grid-area: meta;
+
       position: relative;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       gap: var(--gap);
-
-      & > .info
-      {
-        grid-area: info;
-      }
 
       span
       {
