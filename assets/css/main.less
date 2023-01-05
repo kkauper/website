@@ -132,4 +132,40 @@ main
   {
     grid-template-columns: repeat(3,1fr);
   }
+
+  a
+  {
+    border-radius: var(--radius);
+    display: grid;
+    grid-gap: var(--gap);
+    gap: var(--gap);
+    grid-template-areas:
+        "image image"
+        "title year";
+    outline: 0;
+    position: relative;
+    grid-template-rows: auto 1fr;
+
+    &.large
+    {
+      grid-column: span 2;
+    }
+
+    &.full
+    {
+      grid-column: span 3;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-areas:
+          "label image image"
+          "meta image image";
+      grid-gap: 0;
+      gap: 0;
+      padding: var(--border);
+
+      @media screen and (min-width: 600px)
+      {
+        --border: 2rem;
+      }
+    }
+  }
 }
