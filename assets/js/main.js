@@ -16,7 +16,7 @@ function KAUPERCO()
         this.initWow();
 
         // INIT HOME FADE
-        this.initHeroFade();
+        // this.initHeroFade();
 
         // INIT ARCHIVE SCROLLING
         this.initArchiveScrolling();
@@ -95,22 +95,22 @@ function KAUPERCO()
         }).init();
     }
 
-    this.initHeroFade = function()
-    {
-      $(window).scroll(function()
-      {
-        var scroll = $(window).scrollTop();
-        if (scroll >= 0.6 * $(window).height())
-        {
-          $("body").addClass('--faded');
-          $("body").removeClass('--green');
-        } else
-        {
-          $("body").addClass('--green');
-          $("body").removeClass('--faded');
-        }
-      });
-    }
+    // this.initHeroFade = function()
+    // {
+    //   $(window).scroll(function()
+    //   {
+    //     var scroll = $(window).scrollTop();
+    //     if (scroll >= 0.6 * $(window).height())
+    //     {
+    //       $("body").addClass('--faded');
+    //       $("body").removeClass('--green');
+    //     } else
+    //     {
+    //       $("body").addClass('--green');
+    //       $("body").removeClass('--faded');
+    //     }
+    //   });
+    // }
 
     this.initArchiveScrolling = function()
     {
