@@ -157,9 +157,9 @@ nav.main-nav
                     justify-content: flex-start;
                     align-items: center;
                     height: 32px;
-                    max-width: 174px;
+                    --max-width: 174px;
+                    max-width: calc(var(--max-width) + 120px);
                     margin: 0;
-                    padding: 0;
 
                     @media screen and (max-width: 375px)
                     {
