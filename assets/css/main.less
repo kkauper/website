@@ -78,6 +78,24 @@ body
           border-color: var(--black);
         }
       }
+
+      &.cursor-dark-reverse
+      {
+        .cursor
+        {
+          background: var(--light-grey);
+        }
+
+        .cursor-follower
+        {
+          border-color: var(--light-grey);
+
+          &.active
+          {
+            border-color: var(--white);
+          }
+        }
+      }
     }
 }
 
