@@ -6,3 +6,5 @@ assets/*
 !assets/logo/
 !assets/fonts/
 !assets/favicon/
+**/.DS_Store
+.DS_Store
