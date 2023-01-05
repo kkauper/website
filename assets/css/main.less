@@ -144,8 +144,9 @@ nav.main-nav
             a
             {
                 font-size: 1.8rem;
-                padding: 11px 60px;
-                background: pink;
+                --nav-padding-tb: 11px;
+                --nav-padding-sides: 60px;
+                padding: var(--nav-padding-tb) var(--nav-padding-sides);
 
                 span
                 {
@@ -159,7 +160,7 @@ nav.main-nav
                     justify-content: flex-start;
                     align-items: center;
                     height: 24px;
-                    width: 27.1582px;
+                    width: calc(27.1582px + (var(--nav-padding-sides) * 2));
                     margin: 0;
 
                     img
