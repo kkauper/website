@@ -149,6 +149,42 @@ nav.main-nav
                     position: relative;
                     display: flex;
                 }
+
+                &.logo
+                {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 32px;
+                    max-width: 174px;
+                    margin-right: 20px;
+
+                    @media screen and (max-width: 375px)
+                    {
+                        max-width: 150px;
+                        height: 29px;
+                    }
+
+                    svg
+                    {
+                        width: 174px;
+                        height: 35px;
+
+                        @media screen and (max-width: 375px)
+                        {
+                            .no-mobile
+                            {
+                                display: none !important;
+                            }
+                        }
+
+                        .B
+                        {
+                            fill: var(--green);
+                            transition: fill .35s linear 1.6s;
+                        }
+                    }
+                }
             }
         }
     }
