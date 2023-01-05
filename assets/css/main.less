@@ -111,16 +111,15 @@ main
 
   a
   {
-    border-radius: var(--radius);
+    position: relative;
     display: grid;
-    grid-gap: var(--gap);
     gap: var(--gap);
+    grid-template-rows: auto 1fr;
     grid-template-areas:
         "image image"
         "info year";
+    border-radius: var(--radius);
     outline: 0;
-    position: relative;
-    grid-template-rows: auto 1fr;
 
     & > .image
     {
@@ -140,7 +139,6 @@ main
         left: -2.5%;
         width: 105%;
         height: 105%;
-        -o-object-fit: cover;
         object-fit: cover;
         border-radius: var(--radius);
         transition: .5s transform var(--ease-out-cubic);
@@ -156,6 +154,13 @@ main
 
       span
       {
+        display: block;
+        color: var(--white);
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 1;
+        text-transform: uppercase;
+
         &.title
         {
           white-space: pre-line;
