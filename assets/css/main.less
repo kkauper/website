@@ -148,6 +148,11 @@ main
     outline: 0;
     text-decoration: none;
 
+    @media screen and (max-width: 50em)
+    {
+      grid-column: span 2;
+    }
+
     & > .image
     {
       grid-area: image;
