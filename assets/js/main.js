@@ -4,6 +4,7 @@ function KAUPERCO()
     {
         // NAV MOUSE HOVER CLASS
         this.initNavHoverCursor();
+        this.initDarkHoverCursor();
         this.initNavOpacity();
 
         // OVERLAY NAVIGATION
@@ -32,16 +33,26 @@ function KAUPERCO()
     }
 
     // DARK COURSOR LINKS
-    this.initNavHoverCursor = function()
+    this.initDarkHoverCursor = function()
     {
       $(document).on('mouseenter', '.link.--dark', function()
       {
         $('body').addClass('cursor-dark');
       });
 
+      $(document).on('mouseenter', '.link.--dark .image', function()
+      {
+        $('body').addClass('cursor-dark-reverse');
+      });
+
       $(document).on('mouseleave', '.link.--dark', function()
       {
         $('body').removeClass('cursor-dark');
+      });
+
+      $(document).on('mouseleave', '.link.--dark .image', function()
+      {
+        $('body').removeClass('cursor-dark-reverse');
       });
     }
 
