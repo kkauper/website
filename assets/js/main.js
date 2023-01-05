@@ -70,12 +70,13 @@ function KAUPERCO()
       {
         $('body').addClass('nav-open');
         $(this).addClass('open');
+        $('div.site-nav').attr('aria-hidden', 'false');
       });
     }
 
     this.initHideOverlayNavigation = function()
     {
-      $(document).on('click', 'button.burger.open', function()
+      $(document).on('click', 'button.mobile-nav-button.open', function()
       {
         $('body').removeClass('nav-open');
         $(this).removeClass('open');
