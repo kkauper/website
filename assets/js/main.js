@@ -2,9 +2,6 @@ function KAUPERCO()
 {
     this.init = function()
     {
-        this.initPreloader();
-        this.initPageExit();
-
         // NAV MOUSE HOVER CLASS
         this.initNavHoverCursor();
         this.initNavOpacity();
@@ -16,39 +13,9 @@ function KAUPERCO()
         // INIT LAX.JS
         this.initWow();
 
-        // INIT HOME FADE
-        // this.initHeroFade();
-
         // INIT ARCHIVE SCROLLING
         this.initArchiveScrolling();
     };
-
-    this.initPreloader = function()
-    {
-      $(window).on('load', function() {
-        gsap.to('.preloader', {duration: 1.4, opacity: 0, display:'none'});
-      });
-    };
-
-    this.initPageExit = function()
-    {
-      $(document).on('click', '.link.--animate', function(event)
-      {
-        event.preventDefault();
-        newLocation = $(this).attr('href');
-        gsap.set('.preloader', {xPercent: 100, y: 0, z: 0, opacity: 1, display: 'block'});
-        gsap.to('.preloader', {duration: 1.5, xPercent: 0, y: 0, z: 0, opacity: 1, display: 'block'});
-        setTimeout(function()
-        {
-          $('body').fadeOut(1, newpage);
-        }, 2550);
-      });
-
-      function newpage()
-      {
-        window.location = newLocation;
-      }
-    }
 
     // NAV MOUSE HOVER CLASS
     this.initNavHoverCursor = function()
@@ -110,23 +77,6 @@ function KAUPERCO()
           boxClass: 'kauper-animated'
         }).init();
     }
-
-    // this.initHeroFade = function()
-    // {
-    //   $(window).scroll(function()
-    //   {
-    //     var scroll = $(window).scrollTop();
-    //     if (scroll >= 0.6 * $(window).height())
-    //     {
-    //       $("body").addClass('--faded');
-    //       $("body").removeClass('--green');
-    //     } else
-    //     {
-    //       $("body").addClass('--green');
-    //       $("body").removeClass('--faded');
-    //     }
-    //   });
-    // }
 
     this.initArchiveScrolling = function()
     {
