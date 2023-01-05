@@ -230,15 +230,15 @@ main
 
     &.full
     {
-      grid-column: span 3;
-      grid-template-columns: repeat(3,1fr);
-      grid-template-areas:
-          "label image image"
-          "meta image image";
-      grid-gap: 0;
-      gap: 0;
-      padding: var(--border);
+      box-shadow: 0 0.4rem 2rem 0 rgb(0 0 0 / 35%);
       background-color: currentColor;
+      border-radius: var(--radius);
+      grid-column: span 2;
+      grid-template-columns: repeat(2,1fr);
+      padding: var(--border);
+      grid-template-areas:
+        "image image"
+        "meta meta";
 
       & > .image
       {
@@ -260,6 +260,15 @@ main
       @media screen and (min-width: 37.5em)
       {
         --border: 2rem;
+
+        grid-column: span 3;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas:
+          "label image image"
+          "meta image image";
+        grid-gap: 0;
+        gap: 0;
+        padding: var(--border);
 
         & > .image
         {
