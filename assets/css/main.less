@@ -222,7 +222,7 @@ main
       overflow: hidden;
       will-change: transform;
 
-      img
+      img, video
       {
         position: absolute;
         top: -2.5%;
@@ -232,6 +232,11 @@ main
         object-fit: cover;
         border-radius: var(--radius);
         transition: .5s transform var(--ease-out-cubic);
+      }
+
+      video
+      {
+        pointer-events: none;
       }
 
       &:after
