@@ -303,14 +303,6 @@ main
         padding-top: calc(110% - var(--border));
       }
 
-      & > span.label
-      {
-        position: relative;
-        grid-area: label;
-        padding: calc(var(--border)*2) var(--border) 0 calc(var(--border)*2);
-        color: var(--black) !important;
-      }
-
       & > .meta
       {
         grid-area: meta;
@@ -328,7 +320,7 @@ main
         grid-column: span 3;
         grid-template-columns: repeat(3,1fr);
         grid-template-areas:
-          "label image image"
+          "meta image image"
           "meta image image";
         grid-gap: 0;
         gap: 0;
