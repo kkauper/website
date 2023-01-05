@@ -3,3 +3,6 @@
 *.sw*
 assets/*
 !assets/dist/
+!assets/logo/
+!assets/fonts/
+!assets/favicon/
