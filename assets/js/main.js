@@ -7,6 +7,7 @@ function KAUPERCO()
 
         // NAV MOUSE HOVER CLASS
         this.initNavHoverCursor();
+        this.initNavOpacity();
 
         // OVERLAY NAVIGATION
         this.initShowOverlayNavigation();
@@ -60,6 +61,21 @@ function KAUPERCO()
       $(document).on('mouseleave', '.main-nav', function()
       {
         $('body').removeClass('nav-hover');
+      });
+    }
+
+    this.initNavOpacity = function()
+    {
+      $('nav.main-nav ul li a').on(
+        {
+        mouseenter: function ()
+        {
+          $(this).parent().parent().addClass('is-hovered');
+        },
+        mouseleave: function ()
+        {
+          $(this).parent().parent().removeClass('is-hovered');
+        }
       });
     }
 
