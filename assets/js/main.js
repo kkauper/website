@@ -66,11 +66,10 @@ function KAUPERCO()
     // OVERLAY NAVIGATION
     this.initShowOverlayNavigation = function()
     {
-      $(document).on('click', 'button.burger', function()
+      $(document).on('click', 'button.mobile-nav-button', function()
       {
         $('body').addClass('nav-open');
         $(this).addClass('open');
-        $('div.site-nav').attr('aria-hidden', 'false');
       });
     }
 

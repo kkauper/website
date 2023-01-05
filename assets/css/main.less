@@ -221,13 +221,13 @@ nav.main-nav
             justify-content: space-between;
 
             width: 3.5rem;
-            height: 2rem!important;
+            height: 2rem !important;
             padding: 0.25rem;
             margin: 0 -0.25rem;
 
             box-sizing: content-box;
 
-            cursor: pointer;
+            cursor: pointer !important;
             color: var(--black);
             height: 0.84em;
             outline: 0;
@@ -273,16 +273,37 @@ nav.main-nav
 
 body.nav-open
 {
-  span span svg g
+  nav.main-nav
   {
-    &.hamburger
+    ul
     {
-      opacity: 0;
-    }
+      li.mobile-nav
+      {
+        button.mobile-nav-button
+        {
+          & > span
+          {
+            & > span
+            {
+              svg
+              {
+                g
+                {
+                  &.hamburger
+                  {
+                    opacity: 0;
+                  }
 
-    &.close
-    {
-      opacity: 1;
+                  &.close
+                  {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
