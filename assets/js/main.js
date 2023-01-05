@@ -71,7 +71,7 @@ function KAUPERCO()
         $('body').addClass('nav-open');
         $(this).addClass('open');
         $('div.site-nav').attr('aria-hidden', 'false');
-      }); 
+      });
     }
 
     this.initHideOverlayNavigation = function()
@@ -95,16 +95,16 @@ function KAUPERCO()
         }).init();
     }
 
-    this.initHeroFade = function() 
+    this.initHeroFade = function()
     {
-      $(window).scroll(function() 
-      {    
-        var scroll = $(window).scrollTop();    
-        if (scroll >= 0.6 * $(window).height()) 
+      $(window).scroll(function()
+      {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 0.6 * $(window).height())
         {
           $("body").addClass('--faded');
           $("body").removeClass('--green');
-        } else 
+        } else
         {
           $("body").addClass('--green');
           $("body").removeClass('--faded');
@@ -112,11 +112,11 @@ function KAUPERCO()
       });
     }
 
-    this.initArchiveScrolling = function() 
+    this.initArchiveScrolling = function()
     {
       $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
-    
+
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top - 160
         }, 500);
@@ -129,7 +129,7 @@ function KAUPERCO()
 
 $(function() {
   new KAUPERCO();
-}); 
+});
 
 
 (() => {
