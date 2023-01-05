@@ -3,7 +3,7 @@ function KAUPERCO()
     this.init = function()
     {
         this.initPreloader();
-        // this.initPageExit();
+        this.initPageExit();
 
         // NAV MOUSE HOVER CLASS
         this.initNavHoverCursor();
@@ -30,25 +30,25 @@ function KAUPERCO()
       });
     };
 
-    // this.initPageExit = function()
-    // {
-    //   $(document).on('click', '.link.--animate', function(event)
-    //   {
-    //     event.preventDefault();
-    //     newLocation = this.href;
-    //     gsap.set('.preloader', {xPercent: 100, y: 0, z: 0, opacity: 1, display: 'block'});
-    //     gsap.to('.preloader', {duration: 0.5, xPercent: 0, y: 0, z: 0, opacity: 1, display: 'block'});
-    //     setTimeout(function()
-    //     {
-    //       $('body').fadeOut(1, newpage);
-    //     }, 550);
-    //   });
+    this.initPageExit = function()
+    {
+      $(document).on('click', '.link.--animate', function(event)
+      {
+        event.preventDefault();
+        newLocation = $(this).attr('href');
+        gsap.set('.preloader', {xPercent: 100, y: 0, z: 0, opacity: 1, display: 'block'});
+        gsap.to('.preloader', {duration: 0.5, xPercent: 0, y: 0, z: 0, opacity: 1, display: 'block'});
+        setTimeout(function()
+        {
+          $('body').fadeOut(1, newpage);
+        }, 550);
+      });
 
-    //   function newpage()
-    //   {
-    //     window.location = newLocation;
-    //   }
-    // }
+      function newpage()
+      {
+        window.location = newLocation;
+      }
+    }
 
     // NAV MOUSE HOVER CLASS
     this.initNavHoverCursor = function()
