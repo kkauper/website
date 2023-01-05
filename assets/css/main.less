@@ -164,7 +164,10 @@ main
 
     @media screen and (max-width: 37.49375em)
     {
-      grid-column: span 2;
+      &[ratio="2"]
+      {
+        grid-column: span 2;
+      }
     }
 
     & > .image
