@@ -120,6 +120,7 @@ main
         "info year";
     border-radius: var(--radius);
     outline: 0;
+    text-decoration: none;
 
     & > .image
     {
@@ -147,6 +148,12 @@ main
 
     & > .meta
     {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--gap);
+
       & > .info
       {
         grid-area: info;
