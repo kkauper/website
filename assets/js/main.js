@@ -37,11 +37,11 @@ function KAUPERCO()
         event.preventDefault();
         newLocation = $(this).attr('href');
         gsap.set('.preloader', {xPercent: 100, y: 0, z: 0, opacity: 1, display: 'block'});
-        gsap.to('.preloader', {duration: 0.5, xPercent: 0, y: 0, z: 0, opacity: 1, display: 'block'});
+        gsap.to('.preloader', {duration: 1.5, xPercent: 0, y: 0, z: 0, opacity: 1, display: 'block'});
         setTimeout(function()
         {
           $('body').fadeOut(1, newpage);
-        }, 550);
+        }, 2550);
       });
 
       function newpage()
