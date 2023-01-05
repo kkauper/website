@@ -31,6 +31,20 @@ function KAUPERCO()
       });
     }
 
+    // DARK COURSOR LINKS
+    this.initNavHoverCursor = function()
+    {
+      $(document).on('mouseenter', '.link.--dark', function()
+      {
+        $('body').addClass('cursor-dark');
+      });
+
+      $(document).on('mouseleave', '.link.--dark', function()
+      {
+        $('body').removeClass('cursor-dark');
+      });
+    }
+
     this.initNavOpacity = function()
     {
       $('nav.main-nav ul li a').on(
