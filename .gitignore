@@ -1,3 +1,5 @@
-.vscode/settings.json
-assets/css/**
-assets/js/**
+.idea/
+.vscode/
+*.sw*
+assets/*
+!assets/dist/
