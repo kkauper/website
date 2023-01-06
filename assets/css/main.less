@@ -243,6 +243,7 @@ section.hero
           --char: 0;
           transform: translateY(-92%);
           transition-duration: 1s;
+          transition-delay: 1s;
           transition-property: transform;
           transition-timing-function: var(--ease-in-out-expo);
 
@@ -447,11 +448,6 @@ section.hero
               &:before
               {
                 transform: translateY(92%)!important;
-              }
-
-              &:not[data-char="."]
-              {
-                transition-delay: calc(var(--delay) + var(--line)*.17s + var(--char)*.07s + .5s);
               }
             }
           }
