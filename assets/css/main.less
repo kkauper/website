@@ -192,50 +192,62 @@ section.hero
     font-family: var(--font-serif);
     font-size: 6rem;
 
-    span
+    span.position
     {
-      &.position
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      grid-gap: 0.22em;
+      gap: 0.22em;
+      flex-wrap: nowrap;
+      overflow: hidden;
+
+      & > .line
       {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        grid-gap: 0.22em;
-        gap: 0.22em;
-        flex-wrap: nowrap;
-        overflow: hidden;
+        line-height: inherit;
+        height: 0.9em;
+        white-space: nowrap;
+        padding-top: 0.02em;
+        --line: 0;
+        --delay: 0;
 
-        & > .line
+        & > .char
         {
-          line-height: inherit;
-          height: 0.9em;
-          white-space: nowrap;
-          padding-top: 0.02em;
-          --line: 0;
-          --delay: 0;
+          position: relative;
+          display: inline-block;
+          --char: 0;
+          transform: translateY(-92%);
+          transition-duration: 1s;
+          transition-property: transform;
+          transition-timing-function: var(--ease-in-out-expo);
 
-          & > .char
+          &:before
           {
-            position: relative;
-            display: inline-block;
-            --char: 0;
-            transform: translateY(-92%);
+            content: attr(data-char);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
             transition-duration: 1s;
             transition-property: transform;
             transition-timing-function: var(--ease-in-out-expo);
+            transition-delay: calc(var(--line)*.17s + var(--char)*.07s);
+          }
+        }
+      }
+    }
+  }
 
-            &:before
-            {
-              content: attr(data-char);
-              display: block;
-              position: absolute;
-              top: 0;
-              left: 0;
-              transition-duration: 1s;
-              transition-property: transform;
-              transition-timing-function: var(--ease-in-out-expo);
-              transition-delay: calc(var(--line)*.17s + var(--char)*.07s);
-            }
-
+  &.active
+  {
+    h1
+    {
+      span.position
+      {
+        & > span.line
+        {
+          & > span.char
+          {
             &[data-char]
             {
               transform: none!important;
