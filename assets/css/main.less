@@ -213,8 +213,20 @@ section.hero
         {
           img
           {
+            position: relative;
             display: block;
             width: 6rem;
+
+            &.logo
+            {
+              top: -.1rem;
+            }
+
+            &.factory
+            {
+              top: -.2rem;
+              border-radius: var(--radius);
+            }
           }
         }
 
@@ -268,6 +280,11 @@ section.hero
             img
             {
               width: 7rem;
+
+              &.logo
+              {
+                top: -.1rem;
+              }
             }
           }
         }
@@ -292,6 +309,11 @@ section.hero
             img
             {
               width: 9rem;
+
+              &.logo
+              {
+                top: -.35rem;
+              }
             }
           }
         }
@@ -316,6 +338,18 @@ section.hero
             img
             {
               width: 12rem;
+
+              &.logo
+              {
+                top: -.7rem;
+              }
+
+              &.factory
+              {
+                top: -2rem;
+                width: auto;
+                height: 9rem;
+              }
             }
           }
         }
