@@ -192,54 +192,6 @@ section.hero
     font-family: var(--font-serif);
     font-size: 6rem;
 
-    @media screen and (min-width: 48em)
-    {
-      font-size: 7rem;
-
-      & > span.position
-      {
-        & > .line
-        {
-          & > .char
-          {
-            margin-left: -1.25rem;
-          }
-        }
-      }
-    }
-
-    @media screen and (min-width: 64em)
-    {
-      font-size: 9rem;
-
-      & > span.position
-      {
-        & > .line
-        {
-          & > .char
-          {
-            margin-left: -2.25rem;
-          }
-        }
-      }
-    }
-
-    @media screen and (min-width: 90em)
-    {
-      font-size: 12rem;
-
-      & > span.position
-      {
-        & > .line
-        {
-          & > .char
-          {
-            margin-left: -3rem;
-          }
-        }
-      }
-    }
-
     span.position
     {
       display: flex;
@@ -293,6 +245,54 @@ section.hero
             transition-property: transform;
             transition-timing-function: var(--ease-in-out-expo);
             transition-delay: calc(var(--line)*.17s + var(--char)*.07s);
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 48em)
+    {
+      font-size: 7rem;
+
+      & > span.position
+      {
+        & > .line
+        {
+          & > .char
+          {
+            margin-left: -1.25rem;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 64em)
+    {
+      font-size: 9rem;
+
+      & > span.position
+      {
+        & > .line
+        {
+          & > .char
+          {
+            margin-left: -2.25rem;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 90em)
+    {
+      font-size: 12rem;
+
+      & > span.position
+      {
+        & > .line
+        {
+          & > .char
+          {
+            margin-left: -3rem;
           }
         }
       }
