@@ -192,6 +192,27 @@ section.hero
     font-family: var(--font-serif);
     font-size: 6rem;
 
+    @media screen and (min-width: 64em)
+    {
+      font-size: 12rem;
+    }
+
+    @media screen and (min-width: 90em)
+    {
+      font-size: 14rem;
+
+      & > span.position
+      {
+        & > .line
+        {
+          & > .char
+          {
+            margin-left: -3rem;
+          }
+        }
+      }
+    }
+
     span.position
     {
       display: flex;
