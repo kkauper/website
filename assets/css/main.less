@@ -152,6 +152,19 @@ body
 
 @import url('../dist/css/_navigation.min.css');
 
+.wrapper
+{
+  &[loaded="false"]
+  {
+    opacity: 0;
+  }
+
+  &[loaded="true"]
+  {
+    opacity: 1;
+  }
+}
+
 section.hero
 {
   h1
