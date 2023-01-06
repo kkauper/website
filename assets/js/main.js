@@ -29,7 +29,7 @@ function KAUPERCO()
         setTimeout(function()
         {
           $('body').addClass('loaded');
-          $('.wrapper').data('loaded','true');
+          $('.wrapper').attr('data-loaded','true');
         }, 500);
        });
     }
