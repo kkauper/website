@@ -205,21 +205,34 @@ section.hero
       & > .line
       {
         line-height: inherit;
-        height: 0.9em;
         white-space: nowrap;
-        padding-top: 0.02em;
         --line: 0;
         --delay: 0;
+
+        & > .image
+        {
+          img
+          {
+            display: block;
+            width: 6rem;
+          }
+        }
 
         & > .char
         {
           position: relative;
           display: inline-block;
+          margin-left: -1rem;
           --char: 0;
           transform: translateY(-92%);
           transition-duration: 1s;
           transition-property: transform;
           transition-timing-function: var(--ease-in-out-expo);
+
+          &:first-child
+          {
+            margin-left: 0;
+          }
 
           &:before
           {
