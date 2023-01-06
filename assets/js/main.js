@@ -26,7 +26,11 @@ function KAUPERCO()
     this.initDOM = function()
     {
       $(document).ready(function(){
-        $('body').addClass('expand');
+        setTimeout(function()
+        {
+          $('body').addClass('loaded');
+          $('.wrapper').data('loaded','true');
+        }, 500);
        });
     }
 
