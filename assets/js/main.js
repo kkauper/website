@@ -2,6 +2,9 @@ function KAUPERCO()
 {
     this.init = function()
     {
+        // LOAD CONTENT AFTER DOM IS READY
+        this.initDOM();
+
         // NAV MOUSE HOVER CLASS
         this.initNavHoverCursor();
         this.initDarkHoverCursor();
@@ -18,6 +21,14 @@ function KAUPERCO()
         // INIT ARCHIVE SCROLLING
         this.initArchiveScrolling();
     };
+
+    // LOAD CONTENT AFTER DOM IS READY
+    this.initDOM = function()
+    {
+      $(document).ready(function(){
+        $('body').addClass('expand');
+       });
+    }
 
     // NAV MOUSE HOVER CLASS
     this.initNavHoverCursor = function()

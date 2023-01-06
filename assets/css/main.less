@@ -154,6 +154,8 @@ body
 
 .wrapper
 {
+  transition: opacity .2s ease;
+
   &[loaded="false"]
   {
     opacity: 0;
@@ -162,6 +164,13 @@ body
   &[loaded="true"]
   {
     opacity: 1;
+  }
+
+  & > .stage
+  {
+    height: 100%;
+    width: 100%;
+    padding-top: var(--safe-area-inset-top);
   }
 }
 
