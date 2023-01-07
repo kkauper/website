@@ -44,7 +44,6 @@ function KAUPERCO()
         $(document).on('mouseenter', 'section.archive-list div.projects div.stage a.project', function()
         {
             $(this).parent().parent().parent().addClass('active').css('color', $(this).attr('data-color'));
-            $('body').css('background-color', $(this).attr('data-color'));
         });
     }
 
@@ -53,7 +52,6 @@ function KAUPERCO()
         $(document).on('mouseleave', 'section.archive-list', function()
         {
             $(this).removeClass('active').css('color', '#123123');
-            $('body').css('background-color', 'transparent');
         });
     }
 
