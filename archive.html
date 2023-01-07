@@ -26,7 +26,7 @@
 <link rel="alternate" href="https://kauper.co" hreflang="x-default" />
 
 </head>
-<body>
+<body class="archive">
    <div class="cursor"></div>
    <div class="cursor-follower"></div>
 
@@ -79,43 +79,64 @@
             ARCHIV
          </section>
          <main>
-            <a class="link large" href="#" target="_blank">
-               <div class="image">
-                  <img src="images/img-large.jpg">
+            <section class="archive-header --grid">
+               <div class="wrapper">
+                 <div class="content">
+                   <h1>The Archive.</h1>
+                   <p>A hodgepodge, all sorts, a motley mess, or at least a clear conglomerate, maybe also a potpourri of my work over the years. A look back or just “the archive”.</p>
+                 </div>
                </div>
-               <div class="meta">
-                  <div class="info">
-                     <span class="title">TITLE</span>
-                     <span class="description">DESCRIPTION</span>
+             </section>
+
+             <section class="archive-list --grid">
+               <div class="archive-navigation">
+                 <ul>
+                   <li><a href="#y-2022" class="year-link link">2022</a></li>
+                   <li><a href="#y-2021" class="year-link link">2021</a></li>
+                   <li><a href="#y-2020" class="year-link link">2020</a></li>
+                   <li><a href="#y-2019" class="year-link link">2019</a></li>
+                   <li><a href="#y-2018" class="year-link link">2018</a></li>
+                   <li><a href="#y-2017" class="year-link link">2017</a></li>
+                   <li><a href="#y-2016" class="year-link link">2016</a></li>
+                   <li><a href="#y-2015" class="year-link link">2015</a></li>
+                   <li><a href="#y-2014" class="year-link link">2014</a></li>
+                   <li><a href="#y-2013" class="year-link link">2013 and earlier</a></li>
+                 </ul>
+               </div>
+               <div class="archive-projects">
+                  <div id="2022" class="archive-year">
+                      <div class="year">
+                          <h2>2022</h2>
+                      </div>
+                      <div class="projects">
+                          <ul>
+                              <li class="{{.id}} --linked-{{.clickable}} --fav-{{.favorite}}">
+                                  <a class="link --animate --archive"{{- if eq .favorite true }}href="/en/projects/{{.id}}"{{ else }}href="/en/archive/{{.id}}"{{ end }}>
+                                      <img src="/icons/fav-project.svg">
+                                      PROJEKTNAME
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
                   </div>
-                  <span class="year">YEAR</span>
+
+                  <div id="2021" class="archive-year">
+                     <div class="year">
+                         <h2>2021</h2>
+                     </div>
+                     <div class="projects">
+                         <ul>
+                             <li class="{{.id}} --linked-{{.clickable}} --fav-{{.favorite}}">
+                                 <a class="link --animate --archive"{{- if eq .favorite true }}href="/en/projects/{{.id}}"{{ else }}href="/en/archive/{{.id}}"{{ end }}>
+                                     <img src="/icons/fav-project.svg">
+                                     PROJEKTNAME
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
                </div>
-            </a>
-            <a class="link small" href="#" target="_blank">
-               <div class="image">
-                  <img src="images/img-small.jpg">
-               </div>
-               <div class="meta">
-                  <div class="info">
-                     <span class="title">TITLE</span>
-                     <span class="description">DESCRIPTION</span>
-                  </div>
-                  <span class="year">YEAR</span>
-               </div>
-            </a>
-            <a class="link full" href="#" target="_blank" style="color: #F4ECDF;">
-               <div class="image">
-                  <img src="images/img-full.jpg">
-               </div>
-               <span class="label">LABEL</span>
-               <div class="meta">
-                  <div class="info">
-                     <span class="title">TITLE</span>
-                     <span class="description">DESCRIPTION</span>
-                  </div>
-                  <span class="year">YEAR</span>
-               </div>
-            </a>
+             </section>
          </main>
 
          <div class="site-nav" aria-hidden="true">
