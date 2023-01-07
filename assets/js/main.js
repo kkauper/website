@@ -43,6 +43,7 @@ function KAUPERCO()
         $(document).on('mouseenter', 'section.archive-list div.projects div.stage a.project', function(project)
         {
             $(this).parent().parent().parent().addClass('active').attr('data-color', $(this).attr('data-color'));
+            console.log($(this).parent().parent().parent().addClass('active').attr('data-color', $(this).attr('data-color')));
         });
     }
 
