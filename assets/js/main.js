@@ -51,7 +51,7 @@ function KAUPERCO()
     {
         $(document).on('mouseleave', 'section.archive-list', function()
         {
-            $(this).removeClass('active').css('color', '#123123');
+            $(this).removeClass('active').css('color', '#546D63');
         });
     }
 
