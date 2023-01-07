@@ -5,6 +5,9 @@ function KAUPERCO()
         // LOAD CONTENT AFTER DOM IS READY
         this.initDOM();
 
+        // ARCHIVE CHANGE CLASS
+        this.initArchiveClass();
+
         // NAV MOUSE HOVER CLASS
         this.initNavHoverCursor();
         this.initDarkHoverCursor();
@@ -33,6 +36,14 @@ function KAUPERCO()
           $('section.hero').addClass('loaded');
         }, 500);
        });
+    }
+
+    this.initArchiveClass = function()
+    {
+        $(document).on('mouseenter', 'section.archive-list .projects .stage .project', function(project)
+        {
+            $(this).parent().parent().parent().parent().addClass('lol');
+        });
     }
 
     // NAV MOUSE HOVER CLASS
