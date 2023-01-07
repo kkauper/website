@@ -7,6 +7,7 @@ function KAUPERCO()
 
         // ARCHIVE CHANGE CLASS
         this.initArchiveClass();
+        this.initArchiveClassDelete();
 
         // NAV MOUSE HOVER CLASS
         this.initNavHoverCursor();
@@ -40,10 +41,19 @@ function KAUPERCO()
 
     this.initArchiveClass = function()
     {
-        $(document).on('mouseenter', 'section.archive-list div.projects div.stage a.project', function(project)
+        $(document).on('mouseenter', 'section.archive-list div.projects div.stage a.project', function()
         {
             $(this).parent().parent().parent().addClass('active').css('color', $(this).attr('data-color'));
-            console.log($(this).parent().parent().parent().addClass('active').css('color', $(this).attr('data-color')));
+            $('body').addClass('change-color');
+        });
+    }
+
+    this.initArchiveClassDelete = function()
+    {
+        $(document).on('mouseleave', 'section.archive-list', function()
+        {
+            $(this).removeClass('active').css('color', '#123123');
+            $('body').removeClass('change-color');
         });
     }
 
