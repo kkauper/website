@@ -40,9 +40,9 @@ function KAUPERCO()
 
     this.initArchiveClass = function()
     {
-        $(document).on('mouseenter', 'section.archive-list .projects .stage .project', function(project)
+        $(document).on('mouseenter', 'section.archive-list div.projects div.stage a.project', function(project)
         {
-            $(this).parent().parent().parent().parent().addClass('lol');
+            $(this).parent().parent().parent().addClass('lol');
         });
     }
 
