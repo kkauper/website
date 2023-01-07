@@ -42,7 +42,7 @@ function KAUPERCO()
     {
         $(document).on('mouseenter', 'section.archive-list div.projects div.stage a.project', function(project)
         {
-            $(this).parent().parent().parent().addClass('active').css('background-color', 'attr(data-color)');
+            $(this).parent().parent().parent().addClass('active').css('background-color', '#123123');
         });
     }
 
