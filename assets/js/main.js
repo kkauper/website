@@ -27,20 +27,20 @@ function KAUPERCO()
     };
 
     // LOAD CONTENT AFTER DOM IS READY
-    this.initDOM = function()
+    this.initDOM = function ()
     {
-      $(document).ready(function(){
-        setTimeout(function()
+        $(document).ready(function ()
         {
-          $('body').addClass('loaded');
-          $('.wrapper').attr('data-loaded','true');
-          $('section.hero').addClass('loaded');
-          setTimout(function(){
-            $('main').addClass('loaded');
-          }, 1000);
-        }, 1000);
+            setTimeout(function ()
+            {
+                $('body').addClass('loaded');
+                $('.wrapper').attr('data-loaded', 'true');
+                $('section.hero').addClass('loaded');
+            }, 1000).afterTime(3000, function () {
+                $('main').addClass('loaded');
+            });
 
-       });
+        });
     }
 
     this.initArchiveClass = function()
