@@ -35,12 +35,12 @@ function KAUPERCO()
             const main = $('main');
 
               body.addClass('loaded');
-              wrapper.attr('data-loaded', 'true');
-              hero.addClass('loaded');
 
             setTimeout(function () {
+                wrapper.attr('data-loaded', 'true');
+                hero.addClass('loaded');
                 main.addClass('loaded');
-            }, 1000);
+            }, 1500);
         });
     }
 
