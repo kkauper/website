@@ -27,27 +27,30 @@ function KAUPERCO()
     };
 
     // LOAD CONTENT AFTER DOM IS READY
-    this.initDOM = function ()
-    {
-        $(document).ready(function ()
-        {
-            setTimeout(function ()
-            {
-                $('body').addClass('loaded');
-                $('.wrapper').attr('data-loaded', 'true');
-                $('section.hero').addClass('loaded');
-            }, 1000).afterTime(3000, function () {
-                $('main').addClass('loaded');
-            });
+    this.initDOM = function () {
+        $(document).ready(function () {
+            const body = $('body');
+            const wrapper = $('.wrapper');
+            const hero = $('section.hero');
+            const main = $('main');
 
+            setTimeout(function () {
+              body.addClass('loaded');
+              wrapper.attr('data-loaded', 'true');
+              hero.addClass('loaded');
+            }, 1000);
+
+            setTimeout(function () {
+              main.addClass('loaded');
+            }, 4000);
         });
     }
 
     this.initArchiveClass = function()
     {
-        $(document).on('mouseenter', 'section.archive-list div.projects div.stage a.project', function()
-        {
-            $(this).parent().parent().parent().addClass('active').css('color', $(this).attr('data-color'));
+        $(document).on('mouseenter', 'section.archive-list div.projects div.stage a.project', function() {
+            const element = $(this);
+            element.parent().parent().parent().addClass('active').css('color', element.attr('data-color'));
         });
     }
 
