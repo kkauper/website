@@ -35,7 +35,7 @@ function KAUPERCO()
           $('body').addClass('loaded');
           $('.wrapper').attr('data-loaded','true');
           $('section.hero').addClass('loaded');
-        }, 500);
+        }, 1000);
        });
     }
 
