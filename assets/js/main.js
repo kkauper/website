@@ -34,15 +34,13 @@ function KAUPERCO()
             const hero = $('section.hero');
             const main = $('main');
 
-            setTimeout(function () {
               body.addClass('loaded');
               wrapper.attr('data-loaded', 'true');
               hero.addClass('loaded');
-            }, 1000);
 
             setTimeout(function () {
-              main.addClass('loaded');
-            }, 4000);
+                main.addClass('loaded');
+            }, 1000);
         });
     }
 
