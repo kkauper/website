@@ -28,48 +28,19 @@ function KAUPERCO()
 
     // LOAD CONTENT AFTER DOM IS READY
     this.initDOM = function () {
-        // $(document).ready(function () {
-        //     const body = $('body');
-        //     const wrapper = $('.wrapper');
-        //     const hero = $('section.hero');
-        //     const main = $('main');
-
-        //       body.addClass('loaded');
-        //       wrapper.attr('data-loaded', 'true');
-        //       hero.addClass('loaded');
-
-        //     setTimeout(function () {
-        //         main.addClass('loaded');
-        //     }, 1000);
-        // });
-
-        $(document).ready(function(){
-
+        $(document).ready(function () {
             const body = $('body');
             const wrapper = $('.wrapper');
             const hero = $('section.hero');
             const main = $('main');
 
-            body.addClass('loaded').afterTime(1000,function()
-            {
-                wrapper.attr('data-loaded', 'true');
-                wrapper.afterTime(2000,function(){
-                    hero.addClass('loaded');
-                });
-            });
-        });
+              body.addClass('loaded');
+              wrapper.attr('data-loaded', 'true');
+              hero.addClass('loaded');
 
-
-        jQuery.fn.extend({
-            afterTime: function(sec,callback){
-                that = $(this);
-                setTimeout(function(){
-                    console.log("Calling call back");
-                    callback.call(that);
-                    return that;
-                },sec);
-               return this;
-            }
+            setTimeout(function () {
+                main.addClass('loaded');
+            }, 1000);
         });
     }
 
