@@ -149,7 +149,7 @@ function KAUPERCO()
         event.preventDefault();
 
         $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top - 160
+            scrollTop: $($.attr(this, 'href')).offset().top - 80
         }, 500);
     });
     }
